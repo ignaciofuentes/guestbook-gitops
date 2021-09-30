@@ -11,7 +11,7 @@ resources:
 
 images:
 - name: 264144530906.dkr.ecr.us-east-1.amazonaws.com/guestbook
-  newTag: a2a766e6f75a01195b2fbd9922c74bafdb646f97
+  newTag: e2343829ae8ab8119b58c09d801de95466141e09
 - name: frontend
   newName: guestbook
   newTag: 3fa38b9d2acb82a6e567c5935d1037a1339e4f1d
