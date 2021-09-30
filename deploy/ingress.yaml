@@ -7,6 +7,7 @@ metadata:
     alb.ingress.kubernetes.io/target-type: "ip"
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/tags: Environment=dev,Team=test
+    alb.ingress.kubernetes.io/group.name: capstone
 spec:
   rules:
     - http:
@@ -17,4 +18,4 @@ spec:
               service:
                 name: frontend
                 port:
-                  number: 5000
+                  number: 80
