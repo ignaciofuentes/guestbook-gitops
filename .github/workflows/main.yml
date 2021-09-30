@@ -4,6 +4,7 @@ on:
     paths:
       - "**/*.yaml"
       - "**/*.html"
+      - "**/*.cs"
   push:
     paths:
       - "**/*.yaml"
