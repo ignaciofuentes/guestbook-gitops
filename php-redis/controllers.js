@@ -15,6 +15,14 @@ RedisController.prototype.onRedis = function() {
             }));
 };
 
+
+RedisController.prototype.onGetDataFromMyService = function() {
+    this.http_.get("my-service")
+            .success(angular.bind(this, function(data) {
+                alert(data);
+            }));
+};
+
 RedisController.prototype.onClear = function() {
     this.http_.get("guestbook.php?cmd=clear")
             .success(angular.bind(this, function(data) {
