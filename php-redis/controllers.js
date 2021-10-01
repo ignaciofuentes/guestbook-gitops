@@ -15,6 +15,13 @@ RedisController.prototype.onRedis = function() {
             }));
 };
 
+RedisController.prototype.onClear = function() {
+    this.http_.get("guestbook.php?cmd=clear")
+            .success(angular.bind(this, function(data) {
+                alert("all clear");
+            }));
+};
+
 redisApp.controller('RedisCtrl', function ($scope, $http, $location) {
         $scope.controller = new RedisController();
         $scope.controller.scope_ = $scope;

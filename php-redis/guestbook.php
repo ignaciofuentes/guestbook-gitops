@@ -22,7 +22,17 @@ if (isset($_GET['cmd']) === true) {
 
     $client->set($_GET['key'], $_GET['value']);
     print('{"message": "Updated"}');
-  } else {
+  } elseif(($_GET['cmd'] == 'clear')){
+    $client = new Predis\Client([
+      'scheme' => 'tcp',
+      'host'   => $host,
+      'port'   => 6379,
+    ]);
+    $client->del("messages");
+    print('{"message": "Updated"}');
+  } 
+  
+  else {
     $host = 'redis-slave';
     if (getenv('GET_HOSTS_FROM') == 'env') {
       $host = getenv('REDIS_SLAVE_SERVICE_HOST');
