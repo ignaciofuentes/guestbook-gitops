@@ -12,8 +12,8 @@ spec:
   rules:
     - http:
         paths:
-          - path: /front
-            pathType: Prefix
+          - path: /
+            pathType: Exact
             backend:
               service:
                 name: frontend
