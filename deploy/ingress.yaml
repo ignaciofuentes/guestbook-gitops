@@ -28,7 +28,7 @@ spec:
                 port:
                   number: 80
 
-          - path: /guestbook.php?*
+          - path: /guestbook.php
             pathType: Exact
             backend:
               service:
