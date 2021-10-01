@@ -21,7 +21,7 @@ spec:
                 port:
                   number: 80
           - path: /controller.js
-            pathType: Prefix
+            pathType: Exact
             backend:
               service:
                 name: frontend
@@ -29,7 +29,7 @@ spec:
                   number: 80
 
           - path: /guestbook.php?*
-            pathType: Prefix
+            pathType: Exact
             backend:
               service:
                 name: frontend
